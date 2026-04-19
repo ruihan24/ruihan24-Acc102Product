@@ -1,25 +1,40 @@
 # ACC102 Individual Assignment: Financial Performance Analysis of US Airlines (2021-2025)
 
-## Project Overview
-This project analyzes the financial performance of four major U.S. airlines (AAL, DAL, LUV, UAL) from 2021 to 2025, using data from the WRDS Compustat database. It includes data extraction, cleaning, ratio calculation, and visualization to explore profitability trends across the industry.
+## Project Background & Problem Statement
+This project addresses the need to evaluate the financial health and profitability trends of major U.S. airlines in the post-pandemic era. With significant volatility in the aviation industry, it aims to identify which carriers have maintained stable performance, improved their profit margins, or faced ongoing challenges between 2021 and 2025.
 
-## Key Features
-- Extract 5-year financial data for four major airlines via WRDS API
-- Clean and preprocess raw data (remove duplicates, handle missing values, filter outliers)
-- Calculate core financial ratios: net profit margin and operating profit margin
-- Generate a line chart of net income trends
-- Export cleaned data and summary statistics to Excel files
+## Data Description
+The analysis uses data extracted from the WRDS Compustat database, focusing on four major U.S. airlines:
+- American Airlines (AAL)
+- Delta Air Lines (DAL)
+- Southwest Airlines (LUV)
+- United Airlines (UAL)
 
-## Project Structure
-- fly.py: Main script containing the complete workflow (data extraction, cleaning, analysis, visualization)
-- airlines_clean_data.xlsx: Full cleaned financial dataset
-- airlines_analysis_summary.xlsx: Summary statistics of key financial metrics
-- airline_net_income_trend.png: Visualization of net income trends
+Key variables include annual operating revenue, net income, and operating profit, covering the fiscal years 2021 to 2025.
+
+## Methodology
+The analysis follows a structured workflow:
+1. Data Extraction: Pull financial records from WRDS using Python.
+2. Data Cleaning: Remove duplicates, handle missing values, and filter out extreme outliers.
+3. Financial Ratio Calculation: Compute net profit margin and operating profit margin to assess profitability.
+4. Trend Analysis: Visualize net income trends using line charts to compare performance over time.
+5. Summary Reporting: Generate descriptive statistics for key metrics.
+
+## Results & Key Findings
+- The project produces a clear trend analysis of net income across the four airlines.
+- It identifies periods of recovery, growth, or decline in profitability.
+- The generated charts and tables highlight which carriers maintained stronger financial performance relative to peers.
 
 ## How to Run
-1. Install required libraries first:
-pip install wrds pandas matplotlib numpy openpyxl
+Run the Python script: When prompted, enter your WRDS username and password.
+Input the airline tickers: Enter the tickers you wish to analyze (e.g., AAL,DAL,LUV,UAL).
+Output generation: The script will generate a cleaned dataset, summary statistics, and a net income trend chart in your project directory.
 
-2. Run the script. When prompted, enter your WRDS username and password, then input the tickers to analyze (e.g., AAL,DAL,LUV,UAL).
+## Product / Demo Links
+Source Code: https://github.com/ruihan24/ruihan24-Acc102Product
+Generated Outputs (Excel & Chart): Included in the repository
 
-3. Output files will be saved to the current project directory.
+## Limitations & Future Improvements
+Limitations: The analysis is limited to four major carriers and annual financial data. It does not account for external factors such as fuel prices, labor costs, or macroeconomic shocks.
+
+Improvements: Future work could include quarterly data, additional airlines, and regression analysis to explore drivers of profitability.
